@@ -89,7 +89,21 @@
 
     /* responsive */
     @media (max-width:900px){
+      body{padding:16px}
+      .wrap{max-width:100%}
       .grid{grid-template-columns:1fr}
+      .header{grid-template-columns:1fr; text-align:center}
+      .avatar{margin:0 auto}
+      .profile-meta{align-items:center}
+      .skill-tags{justify-content:center}
+      .right-actions{align-items:center}
+      nav{flex-wrap:wrap; justify-content:center}
+      nav .nav-btn{width:100%; text-align:center}
+      .card{padding:16px}
+      /* teaching cards full width on mobile */
+      .card > div > div{max-width:100%}
+      .side-section{position:relative;top:0}
+    }
       .right-actions{align-items:flex-start}
       .header{grid-template-columns: auto 1fr;}
       .avatar{width:88px;height:88px}
@@ -128,19 +142,15 @@
       </div>
 
       <div class="right-actions">
-        <div class="actions-row">
-          <button class="btn" id="downloadBtn" title="Download resume (placeholder)">Resume</button>
-          <button class="btn secondary" onclick="alert('Say hi: anay@example.com')">Contact</button>
+        <div style="display:flex; gap:12px; align-items:center;">
+          <a href="https://www.instagram.com/a.4yx_" target="_blank" class="btn" style="text-decoration:none">Instagram</a>
+          <a href="https://github.com/anaysabu" target="_blank" class="btn secondary" style="text-decoration:none">GitHub</a>
+          <a href="https://www.linkedin.com/in/anay-sabu-vs" target="_blank" class="btn secondary" style="text-decoration:none">LinkedIn</a>
         </div>
-        <small style="color:var(--muted);">Status: <strong style="color:var(--accent)">Active Analyst</strong></small>
       </div>
     </header>
 
-    <nav role="navigation" aria-label="Primary" class="fade-in" id="nav">
-      <a class="nav-btn" href="blogs.html">BLOGS</a>
-      <a class="nav-btn" href="works.html">MY WORKS</a>
-      <button class="nav-btn" data-section="ongoing" aria-selected="true">ONGOING</button>
-    </nav>
+    
 
     <section class="card fade-in" style="margin-bottom:24px" id="about">
       <h3>About Me</h3>
@@ -150,77 +160,52 @@
       </p>
     </section>
 
-    <!-- Teaching Highlight Card -->
-    <section class="card fade-in" style="margin-bottom:24px; display:flex; justify-content:flex-start;">
-      <div style="max-width:350px; width:100%; display:flex; flex-direction:column; gap:12px; margin:0;">
-        <div style="border-radius:12px; overflow:hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
-          <img src="class1.jpg" alt="Cybersecurity Class at GOV HS West Kadungalloor" style="width:100%; height:220px; object-fit:cover; display:block">
+    <!-- Teaching Highlights -->
+    <section class="card fade-in" style="margin-bottom:24px">
+      <h3>Teaching & Workshops</h3>
+      <div style="display:flex; gap:18px; flex-wrap:wrap;">
+        
+        <!-- Card 1 -->
+        <div style="max-width:350px; width:100%; display:flex; flex-direction:column; gap:12px;">
+          <div style="border-radius:12px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03);">
+            <a href="class1.html" style="display:block"><img src="class1_resized.jpg" alt="Cybersecurity Session" style="width:100%;height:220px;object-fit:cover;display:block"></a>
+          </div>
+          <div>
+            <p style="margin:0;font-weight:700;color:var(--accent)">Cybersecurity Sessions</p>
+            <p style="color:var(--muted);font-size:0.95rem;margin-top:6px">GOV HS WEST KADUNGALLOOR — <strong>Dec 2025</strong></p>
+          </div>
         </div>
-        <div style="padding:8px 6px 2px 6px;">
-          <p style="margin:0;font-weight:700;color:var(--accent);">GOV HS WEST KADUNGALLOOR</p>
-          <p style="color:var(--muted);font-size:0.95rem;margin:6px 0 0 0">Cybersecurity awareness session — <strong>Dec 2025</strong></p>
+
+        <!-- Card 2 -->
+        <div style="max-width:350px; width:100%; display:flex; flex-direction:column; gap:12px;">
+          <div style="border-radius:12px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03);">
+            <a href="iot1.html" style="display:block"><img src="iotcover.jpg" alt="IoT Gadgets" style="width:100%;height:220px;object-fit:cover;display:block"></a>
+          </div>
+          <div>
+            <p style="margin:0;font-weight:700;color:var(--accent)">IoT Gadgets</p>
+            <p style="color:var(--muted);font-size:0.95rem;margin-top:6px">Hands-on hardware & embedded security</p>
+          </div>
         </div>
+
+        <!-- Card 3 -->
+        <div style="max-width:350px; width:100%; display:flex; flex-direction:column; gap:12px;">
+          <div style="border-radius:12px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03);">
+            <a href="software1.html" style="display:block"><img src="codingcover.jpg" alt="Software Based" style="width:100%;height:220px;object-fit:cover;display:block"></a>
+          </div>
+          <div>
+            <p style="margin:0;font-weight:700;color:var(--accent)">Software Based</p>
+            <p style="color:var(--muted);font-size:0.95rem;margin-top:6px">Secure coding & software attacks</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <main class="grid">
-      <section class="card fade-in" id="mainContent" aria-live="polite">
-      <div id="ongoingSection">
-        <h3 style="color:var(--ongoing)">Ongoing Work</h3>
-        <p style="color:var(--muted);font-size:0.95rem;line-height:1.55">No active tasks at the moment. New projects will appear here soon.</p>
-      </div>
-    </section>
+    
 
-    <aside class="side-section">
-
-        <div class="card fade-in">
-          <h3>Ongoing Quote</h3>
-          <div class="placeholder">"Execution in progress. Stand by for output..."</div>
-        </div>
-      </aside>
-    </main>
-
-    <footer>
-      Built with ❤️ • Keep experimenting • Last updated: <strong>Dec 12, 2025</strong>
-    </footer>
+    
   </div>
 
-  <script>
-    // Nav + section switching
-    const nav = document.getElementById('nav');
-    const mainContent = document.getElementById('mainContent');
-    const sections = {
-      blogs: document.getElementById('blogsSection'),
-      works: document.getElementById('worksSection'),
-      ongoing: document.getElementById('ongoingSection')
-    };
-
-    nav.addEventListener('click', e => {
-      const btn = e.target.closest('button');
-      if(!btn) return;
-      document.querySelectorAll('.nav-btn').forEach(b=>b.setAttribute('aria-selected','false'));
-      btn.setAttribute('aria-selected','true');
-      Object.values(sections).forEach(s => s.style.display = 'none');
-      const key = btn.dataset.section;
-      sections[key].style.display = 'block';
-      // small fade
-      sections[key].classList.add('fade-in');
-      setTimeout(()=>sections[key].classList.remove('fade-in'),450);
-    });
-
-    // Demo resume button (replace with real link)
-    document.getElementById('downloadBtn').addEventListener('click', ()=>{
-      alert('This is a placeholder. Replace with a real resume download link or mailto.');
-    });
-
-    // small function to animate bars on load
-    window.addEventListener('load',()=>{
-      document.querySelectorAll('.bar > span').forEach((el, i)=>{
-        const w = el.style.width || (20 + i*24) + '%';
-        // slight delay for stagger
-        setTimeout(()=> el.style.width = w, 200 + i*200);
-      });
-    });
-  </script>
+  
 </body>
 </html>
