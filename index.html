@@ -49,8 +49,8 @@
       display:flex;flex-direction:column;gap:6px;padding:6px 0;
     }
 
-    .name{font-size:1.8rem;font-weight:700;color:var(--accent);letter-spacing:1px}
-    .headline{color:var(--muted);font-size:0.95rem}
+    .name{font-size:1.6rem;font-weight:800;color:var(--accent);letter-spacing:0.5px;line-height:1.2;text-align:center}
+    .headline{color:var(--muted);font-size:0.9rem;line-height:1.4;text-align:center;max-width:28ch;margin:0 auto}
     .badges{display:flex;gap:8px;margin-top:8px}
     .badge{padding:6px 10px;border-radius:999px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:0.82rem}
 
@@ -89,7 +89,18 @@
 
     /* responsive */
     @media (max-width:900px){
-      body{padding:16px}
+      body{padding:14px}
+      .wrap{max-width:100%}
+      .header{grid-template-columns:1fr;gap:14px;text-align:center}
+      .avatar{margin:0 auto;width:72px;height:72px;font-size:16px}
+      .profile-meta{align-items:center}
+      .name{font-size:1.4rem;letter-spacing:0.4px}
+      .headline{font-size:0.85rem}
+      .skill-tags{justify-content:center}
+      .tag{font-size:0.8rem;padding:6px 8px}
+      .right-actions{align-items:center}
+      .card{padding:14px}
+    }
       .wrap{max-width:100%}
       .grid{grid-template-columns:1fr}
       .header{grid-template-columns:1fr; text-align:center}
@@ -124,15 +135,7 @@
         <div class="name">ANAY SABU VS</div>
         <div class="headline">Cyber Forensics • Incident Analyst • Aspiring Red Team</div>
         
-        <!-- Skill Tags directly under the name -->
-        <div class="skill-tags" style="margin-top:10px; display:flex; flex-wrap:wrap; gap:8px;">
-          <span class="tag">Hardware Hacking</span>
-          <span class="tag">Network Analysis</span>
-          <span class="tag">Radio Communication</span>
-          <span class="tag">Linux</span>
-          <span class="tag">AI</span>
-          <span class="tag">Reverse Engineering</span>
-        </div>
+        
         <div class="badges">
           
         </div>
@@ -172,7 +175,7 @@
           </div>
           <div>
             <p style="margin:0;font-weight:700;color:var(--accent)">Cybersecurity Sessions</p>
-            <p style="color:var(--muted);font-size:0.95rem;margin-top:6px">GOV HS WEST KADUNGALLOOR — <strong>Dec 2025</strong></p>
+            <p style="color:var(--muted);font-size:0.95rem;margin-top:6px">Cybersecurity awareness workshop for students </p>
           </div>
         </div>
 
@@ -209,4 +212,3 @@
   
 </body>
 </html>
-
