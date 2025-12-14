@@ -1,2 +1,0 @@
-# anaysabuvs
-MY BLOGE
