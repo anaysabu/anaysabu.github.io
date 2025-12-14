@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anay Sabu VS | Cyber Forensics</title>
+  <meta name="description" content="Portfolio of Anay Sabu VS - Cyber Forensics Analyst">
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#0f1720;
+      --muted:#9aa4ae;
+      --accent:#00ff7a; /* brighter hacker green */
+      --accent-2:#00d1ff;
+      --glass: rgba(255,255,255,0.03);
+      --danger:#ff5c4d;
+      --ongoing:#ffbf00;
+      --radius:14px;
+      --mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';
+    }
+
+    /* LIGHT RESET */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:32px;background:linear-gradient(180deg,var(--bg),#071018 140%);
+      color: #e6eef6;font-family:var(--sans);line-height:1.45;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{max-width:1100px;margin:0 auto}
+
+    /* Header */
+    .header{
+      display:grid;grid-template-columns: auto 1fr auto;gap:20px;align-items:center;
+      padding:22px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(6px);
+    }
+
+    .avatar{
+      width:110px;height:110px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));font-family:var(--mono);font-weight:700;color:#021018;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6), inset 0 -6px 16px rgba(255,255,255,0.02);
+      flex-shrink:0;font-size:20px;letter-spacing:1px;
+    }
+
+    .profile-meta{
+      display:flex;flex-direction:column;gap:6px;padding:6px 0;
+    }
+
+    .name{font-size:1.8rem;font-weight:700;color:var(--accent);letter-spacing:1px}
+    .headline{color:var(--muted);font-size:0.95rem}
+    .badges{display:flex;gap:8px;margin-top:8px}
+    .badge{padding:6px 10px;border-radius:999px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:0.82rem}
+
+    .right-actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+    .actions-row{display:flex;gap:8px}
+    .btn{background:transparent;color:var(--accent);border:1px solid rgba(0,255,122,0.12);padding:8px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+    .btn.secondary{color:var(--accent-2);border-color:rgba(0,209,255,0.08)}
+
+    /* NAV */
+    nav{display:flex;gap:10px;justify-content:center;margin:26px 0}
+    .nav-btn{background:linear-gradient(90deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:10px 16px;border-radius:12px;color:var(--muted);cursor:pointer;font-weight:700}
+    .nav-btn[aria-selected="true"]{color:#00110a;background:linear-gradient(90deg,var(--accent),var(--accent-2));box-shadow:0 8px 30px rgba(0,255,122,0.08)}
+
+    /* layout grid for content */
+    .grid{display:grid;grid-template-columns: 1fr 360px;gap:22px;align-items:start}
+
+    /* main card */
+    .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
+    h3{margin:0 0 12px 0;color:var(--accent)}
+    .placeholder{color:var(--muted);padding:18px;border-radius:10px;border:1px dashed rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+
+    /* ongoing box */
+    .progress{background:rgba(255,255,255,0.03);border-radius:10px;padding:12px}
+    .task{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:8px 0}
+    .task .meta{color:var(--muted);font-size:0.95rem}
+    .bar{height:10px;background:rgba(255,255,255,0.03);border-radius:8px;overflow:hidden}
+    .bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--ongoing),#ffd47a);width:0%;transition:width 1s ease}
+
+    /* right column */
+    .side-section{position:sticky;top:24px}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted);font-weight:600;font-size:0.85rem}
+
+    footer{margin-top:28px;color:var(--muted);text-align:center;font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .right-actions{align-items:flex-start}
+      .header{grid-template-columns: auto 1fr;}
+      .avatar{width:88px;height:88px}
+      nav{flex-wrap:wrap}
+      .side-section{position:relative;top:0}
+    }
+
+    /* small interaction */
+    .fade-in{animation:fadeIn .45s ease both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header fade-in" role="banner">
+      <div class="avatar" aria-hidden="true">AS</div>
+      <div class="profile-meta">
+        <div class="name">ANAY SABU VS</div>
+        <div class="headline">Cyber Forensics • Incident Analyst • Aspiring Red Team</div>
+        
+        <!-- Skill Tags directly under the name -->
+        <div class="skill-tags" style="margin-top:10px; display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="tag">Hardware Hacking</span>
+          <span class="tag">Network Analysis</span>
+          <span class="tag">Radio Communication</span>
+          <span class="tag">Linux</span>
+          <span class="tag">AI</span>
+          <span class="tag">Reverse Engineering</span>
+        </div>
+        <div class="badges">
+          
+        </div>
+          
+          
+        </div>
+      </div>
+
+      <div class="right-actions">
+        <div class="actions-row">
+          <button class="btn" id="downloadBtn" title="Download resume (placeholder)">Resume</button>
+          <button class="btn secondary" onclick="alert('Say hi: anay@example.com')">Contact</button>
+        </div>
+        <small style="color:var(--muted);">Status: <strong style="color:var(--accent)">Active Analyst</strong></small>
+      </div>
+    </header>
+
+    <nav role="navigation" aria-label="Primary" class="fade-in" id="nav">
+      <a class="nav-btn" href="blogs.html">BLOGS</a>
+      <a class="nav-btn" href="works.html">MY WORKS</a>
+      <button class="nav-btn" data-section="ongoing" aria-selected="true">ONGOING</button>
+    </nav>
+
+    <section class="card fade-in" style="margin-bottom:24px" id="about">
+      <h3>About Me</h3>
+      <p style="color:var(--muted);font-size:0.95rem;line-height:1.55">
+        Cybersecurity enthusiast focused on forensics, incident analysis, IoT hacking experiments, and amateur radio. 
+        I enjoy building small security tools, exploring AI-assisted workflows, and teaching students the fundamentals of ethical hacking and digital security.
+      </p>
+    </section>
+
+    <!-- Teaching Highlight Card -->
+    <section class="card fade-in" style="margin-bottom:24px; display:flex; justify-content:flex-start;">
+      <div style="max-width:350px; width:100%; display:flex; flex-direction:column; gap:12px; margin:0;">
+        <div style="border-radius:12px; overflow:hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
+          <img src="class1.jpg" alt="Cybersecurity Class at GOV HS West Kadungalloor" style="width:100%; height:220px; object-fit:cover; display:block">
+        </div>
+        <div style="padding:8px 6px 2px 6px;">
+          <p style="margin:0;font-weight:700;color:var(--accent);">GOV HS WEST KADUNGALLOOR</p>
+          <p style="color:var(--muted);font-size:0.95rem;margin:6px 0 0 0">Cybersecurity awareness session — <strong>Dec 2025</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <main class="grid">
+      <section class="card fade-in" id="mainContent" aria-live="polite">
+      <div id="ongoingSection">
+        <h3 style="color:var(--ongoing)">Ongoing Work</h3>
+        <p style="color:var(--muted);font-size:0.95rem;line-height:1.55">No active tasks at the moment. New projects will appear here soon.</p>
+      </div>
+    </section>
+
+    <aside class="side-section">
+
+        <div class="card fade-in">
+          <h3>Ongoing Quote</h3>
+          <div class="placeholder">"Execution in progress. Stand by for output..."</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Built with ❤️ • Keep experimenting • Last updated: <strong>Dec 12, 2025</strong>
+    </footer>
+  </div>
+
+  <script>
+    // Nav + section switching
+    const nav = document.getElementById('nav');
+    const mainContent = document.getElementById('mainContent');
+    const sections = {
+      blogs: document.getElementById('blogsSection'),
+      works: document.getElementById('worksSection'),
+      ongoing: document.getElementById('ongoingSection')
+    };
+
+    nav.addEventListener('click', e => {
+      const btn = e.target.closest('button');
+      if(!btn) return;
+      document.querySelectorAll('.nav-btn').forEach(b=>b.setAttribute('aria-selected','false'));
+      btn.setAttribute('aria-selected','true');
+      Object.values(sections).forEach(s => s.style.display = 'none');
+      const key = btn.dataset.section;
+      sections[key].style.display = 'block';
+      // small fade
+      sections[key].classList.add('fade-in');
+      setTimeout(()=>sections[key].classList.remove('fade-in'),450);
+    });
+
+    // Demo resume button (replace with real link)
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+      alert('This is a placeholder. Replace with a real resume download link or mailto.');
+    });
+
+    // small function to animate bars on load
+    window.addEventListener('load',()=>{
+      document.querySelectorAll('.bar > span').forEach((el, i)=>{
+        const w = el.style.width || (20 + i*24) + '%';
+        // slight delay for stagger
+        setTimeout(()=> el.style.width = w, 200 + i*200);
+      });
+    });
+  </script>
+</body>
+</html>
