@@ -1,8 +1,8 @@
 [
-  {
-    "title": "CC1101 RF Module",
-    "description": "Sub-GHz RF analysis, signal replay and protocol experimentation",
-    "image": "/img/iot/cc1101.jpg",
-    "link": "/pages/iot/cc1101.html"
-  }
+{
+  "title": "Raspberry Pi Zero 2 WH",
+  "description": "A tiny but powerful SBC for HID attacks, Wi-Fi labs, and evil portals",
+  "image": "/img/iot/pi0/pic1.jpg",
+  "link": "/pages/iot/raspberry-pi-zero-2-wh.html"
+}
 ]

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raspberry Pi Zero 2 WH | IoT Gadgets</title>
+
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#0f1720;
+      --muted:#9aa4ae;
+      --accent:#00ff7a;
+      --radius:14px;
+      --sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      padding:16px;
+      background:linear-gradient(180deg,var(--bg),#071018 140%);
+      color:#e6eef6;
+      font-family:var(--sans);
+      line-height:1.55;
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    .back{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--accent);
+      font-weight:600;
+      text-decoration:none;
+      margin-bottom:16px;
+    }
+
+    h1{
+      color:var(--accent);
+      margin-bottom:6px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:0.95rem;
+      margin-bottom:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:16px;
+      border:1px solid rgba(255,255,255,0.03);
+      margin-bottom:22px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+
+    ul{
+      padding-left:18px;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    ul li{
+      margin-bottom:8px;
+    }
+
+    .buy{
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:rgba(0,255,122,0.1);
+      border:1px solid rgba(0,255,122,0.25);
+      color:var(--accent);
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    @media (max-width:480px){
+      h1{font-size:1.4rem}
+      .gallery img{height:180px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- Back -->
+    <a href="/pages/iot/iot.html" class="back">
+      ← Back to IoT Gadgets
+    </a>
+
+    <!-- Title -->
+    <h1>Raspberry Pi Zero 2 WH</h1>
+    <div class="subtitle">
+      A tiny single-board computer that is often underestimated — but extremely powerful
+      in cybersecurity labs.
+    </div>
+
+    <!-- What it is -->
+    <section class="card">
+      <h2 style="color:var(--accent)">Why this board is underestimated</h2>
+      <p style="color:var(--muted)">
+        The Raspberry Pi Zero 2 WH looks small and simple, but it packs a quad-core CPU,
+        onboard Wi-Fi, Bluetooth, and USB OTG capabilities. Because of its size, low power
+        consumption, and Linux support, it becomes a perfect stealth platform for
+        security research, red-team labs, and hardware hacking experiments.
+      </p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="card">
+      <h2 style="color:var(--accent)">Device Gallery</h2>
+      <div class="gallery">
+        <img src="/img/iot/pi0/pic1.jpg" alt="Raspberry Pi Zero 2 WH setup 1">
+        <img src="/img/iot/pi0/pic2.jpg" alt="Raspberry Pi Zero 2 WH setup 2">
+        <img src="/img/iot/pi0/pic3.jpg" alt="Raspberry Pi Zero 2 WH setup 3">
+      </div>
+    </section>
+
+    <!-- What can be done -->
+    <section class="card">
+      <h2 style="color:var(--accent)">What can be done with this board</h2>
+      <ul>
+        <li><strong>USB HID attacks</strong> — Emulating keyboards for payload delivery (Rubber Ducky-style)</li>
+        <li><strong>Evil Twin & Captive Portals</strong> — Fake access points for awareness labs</li>
+        <li><strong>Wi-Fi attacks</strong> — Packet capture, deauth labs, monitoring</li>
+        <li><strong>Portable hacking toolkit</strong> — Headless Kali Linux device</li>
+        <li><strong>Covert implants</strong> — Low-profile hardware for red-team simulations</li>
+        <li><strong>Automation & scripting</strong> — Python, Bash, and network scripts</li>
+      </ul>
+      <p style="color:var(--muted)">
+        All experiments are performed in controlled, ethical lab environments for
+        educational and defensive research purposes.
+      </p>
+    </section>
+
+    <!-- Buy link -->
+    <section class="card">
+      <h2 style="color:var(--accent)">Where to buy</h2>
+      <a
+        href="https://robu.in/product/raspberry-pi-zero-2-w-with-header/"
+        target="_blank"
+        class="buy"
+      >
+        Buy Raspberry Pi Zero 2 WH →
+      </a>
+    </section>
+
+  </div>
+
+</body>
+</html>
