@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IoT Gadgets | Anay Sabu VS</title>
+
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#0f1720;
+      --muted:#9aa4ae;
+      --accent:#00ff7a;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      padding:16px;
+      background:linear-gradient(180deg,var(--bg),#071018 140%);
+      color:#e6eef6;
+      font-family:var(--sans);
+      line-height:1.5;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    /* Header */
+    .page-header{
+      margin-bottom:24px;
+      padding:18px;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .page-header h1{
+      margin:0;
+      color:var(--accent);
+      font-size:1.6rem;
+    }
+
+    .page-header p{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* Cards */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.03);
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 40px rgba(0,0,0,0.6);
+    }
+
+    .card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .content{
+      padding:14px;
+    }
+
+    .content h3{
+      margin:0;
+      color:var(--accent);
+      font-size:1.05rem;
+    }
+
+    .content p{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+      display:block;
+    }
+
+    /* Back link */
+    .back{
+      display:inline-block;
+      margin-top:22px;
+      color:var(--accent);
+      font-weight:600;
+      font-size:0.95rem;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width:480px){
+      .page-header h1{font-size:1.4rem}
+      .card img{height:180px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <header class="page-header">
+      <h1>IoT Gadgets</h1>
+      <p>Hands-on hardware, RF modules, and embedded security experiments</p>
+    </header>
+
+    <section class="grid" id="list">
+      <!-- Cards injected by JS -->
+    </section>
+
+    <a href="/index.html" class="back">← Back to Home</a>
+
+  </div>
+
+  <script src="/assets/js/app.js"></script>
+  <script>
+    loadProjects('/projects/iot.json');
+  </script>
+
+</body>
+</html>
