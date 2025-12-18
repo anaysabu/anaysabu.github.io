@@ -11,6 +11,8 @@
       --card:#0f1720;
       --muted:#9aa4ae;
       --accent:#00ff7a;
+      --warn:#ffbf00;
+      --danger:#ff5c4d;
       --radius:14px;
       --sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     }
@@ -98,11 +100,20 @@
     }
 
     .warning{
-      border-left:4px solid #ffbf00;
+      border-left:4px solid var(--warn);
       background:rgba(255,191,0,0.08);
       padding:14px;
       border-radius:10px;
       color:#ffd88a;
+      font-size:0.95rem;
+    }
+
+    .danger{
+      border-left:4px solid var(--danger);
+      background:rgba(255,92,77,0.08);
+      padding:14px;
+      border-radius:10px;
+      color:#ffb3aa;
       font-size:0.95rem;
     }
 
@@ -124,19 +135,18 @@
     <!-- Title -->
     <h1>2.4 GHz Wireless Resilience Testing Platform</h1>
     <div class="subtitle">
-      ESP32 + NRF24L01 based lab for studying protocol disruption,
-      packet flooding, and wireless behavior in controlled environments.
+      ESP32 + NRF24L01 based research lab for studying wireless interference,
+      protocol robustness, and defensive awareness in the 2.4 GHz spectrum.
     </div>
 
     <!-- Overview -->
     <section class="card">
       <h2 style="color:var(--accent)">Project Overview</h2>
       <p style="color:var(--muted)">
-        This project demonstrates how low-cost microcontrollers like the ESP32,
-        combined with NRF24L01 RF modules, can be used to analyze and stress-test
-        2.4 GHz wireless protocols. The setup highlights how seemingly simple
-        hardware can influence wireless reliability, interference tolerance,
-        and protocol robustness.
+        This project explores how low-cost embedded hardware can influence
+        wireless reliability in the 2.4 GHz band. By combining an ESP32 with
+        an NRF24L01 module, this setup demonstrates how interference,
+        congestion, and protocol weaknesses can impact modern wireless systems.
       </p>
     </section>
 
@@ -144,10 +154,10 @@
     <section class="card">
       <h2 style="color:var(--accent)">Hardware Gallery</h2>
       <div class="gallery">
-        <img src="/img/iot/BT_Jammer/pic1.jpg" alt="ESP32 setup showing RF lab configuration">
-        <img src="/img/iot/BT_Jammer/pic2.jpg" alt="ESP32 wireless testing build">
-        <img src="/img/iot/BT_Jammer/pic3.jpg" alt="ESP32 based 2.4 GHz test platform">
-        <img src="/img/iot/BT_Jammer/pic4.jpg" alt="NRF24L01 RF module used for experimentation">
+        <img src="/img/iot/BT_Jammer/pic1.jpg" alt="ESP32 wireless lab setup">
+        <img src="/img/iot/BT_Jammer/pic2.jpg" alt="ESP32 RF testing build">
+        <img src="/img/iot/BT_Jammer/pic3.jpg" alt="2.4 GHz experimentation setup">
+        <img src="/img/iot/BT_Jammer/pic4.jpg" alt="NRF24L01 RF module">
       </div>
     </section>
 
@@ -155,23 +165,44 @@
     <section class="card">
       <h2 style="color:var(--accent)">Research Capabilities</h2>
       <ul>
-        <li>2.4 GHz protocol disruption and interference analysis</li>
-        <li>Packet flooding and collision behavior studies</li>
-        <li>Bluetooth and Wi-Fi coexistence observations</li>
-        <li>Understanding deauthentication and channel congestion effects</li>
-        <li>Wireless resilience and mitigation testing</li>
+        <li>2.4 GHz interference and congestion analysis</li>
+        <li>Packet flooding and collision behavior observation</li>
+        <li>Bluetooth and Wi-Fi coexistence testing</li>
+        <li>Studying protocol robustness under RF stress</li>
+        <li>Defensive awareness for wireless security design</li>
       </ul>
+    </section>
+
+    <!-- Dark Side -->
+    <section class="card">
+      <h2 style="color:var(--danger)">Risks & Real-World Impact of Wireless Interference</h2>
+      <div class="danger">
+        When misused, 2.4 GHz interference techniques can have serious real-world
+        consequences. This project highlights why understanding these risks is
+        critical for defenders and security professionals.
+        <br><br>
+        <strong>Potential impacts include:</strong>
+        <ul>
+          <li>Disruption of <strong>Wi-Fi networks</strong>, causing denial of service</li>
+          <li>Interference with <strong>Bluetooth devices</strong> such as wearables and peripherals</li>
+          <li>Loss of connectivity for <strong>CCTV cameras</strong> operating on 2.4 GHz</li>
+          <li>Communication instability in <strong>drones</strong> and remote-controlled systems</li>
+          <li>Collateral disruption to nearby, unintended wireless systems</li>
+        </ul>
+        These risks demonstrate how wireless interference can move from a lab
+        experiment to a serious safety and security concern if abused.
+      </div>
     </section>
 
     <!-- Resources -->
     <section class="card">
-      <h2 style="color:var(--accent)">Resources & Firmware</h2>
+      <h2 style="color:var(--accent)">Resources & References</h2>
       <a
         href="https://github.com/smoochiee/Bluetooth-jammer-esp32/tree/main"
         target="_blank"
         class="link-btn"
       >
-        View Project Repository →
+        View Reference Repository →
       </a>
       <br><br>
       <a
@@ -179,7 +210,7 @@
         target="_blank"
         class="link-btn"
       >
-        Flash Firmware (Web Tool) →
+        Firmware Flash Tool →
       </a>
     </section>
 
@@ -187,15 +218,15 @@
     <section class="card">
       <h2 style="color:var(--accent)">Legal & Ethical Notice</h2>
       <div class="warning">
-        Wireless jamming and intentional interference with communication systems
-        is illegal in many countries and strictly regulated by law.
+        Intentional radio interference and wireless jamming is illegal or
+        strictly regulated in many countries.
         <br><br>
-        This project is intended <strong>only for educational, research,
-        and defensive testing</strong> in controlled environments such as
-        RF-shielded labs or with explicit authorization.
+        This project is presented strictly for <strong>educational,
+        defensive, and research purposes</strong> in controlled environments
+        such as RF-shielded labs or with explicit authorization.
         <br><br>
-        The author does not encourage or support unauthorized use, disruption
-        of public networks, or violation of local wireless regulations.
+        Unauthorized use against public or private networks may violate
+        telecommunications laws and safety regulations.
       </div>
     </section>
 
