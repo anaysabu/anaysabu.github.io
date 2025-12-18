@@ -8,7 +8,7 @@
 { 
   "title": "2.4 ghz jammer with esp32 and nrf24l01",
   "description": "2.4 GHz protocol disruption, packet flooding, and deauthentication attacks",
-  "image": "/img/iot/BT_jammer/pic-cover.jpg",
+  "image": "/img/iot/BT_Jammer/pic-cover.jpg",
   "link": "/pages/iot/esp32-nrf24l01-2.4ghz-lab.html"
 }
 ]
