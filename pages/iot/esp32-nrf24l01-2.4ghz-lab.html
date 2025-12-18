@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2.4 GHz Wireless Resilience Lab | ESP32 & NRF24L01</title>
+
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#0f1720;
+      --muted:#9aa4ae;
+      --accent:#00ff7a;
+      --radius:14px;
+      --sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      padding:16px;
+      background:linear-gradient(180deg,var(--bg),#071018 140%);
+      color:#e6eef6;
+      font-family:var(--sans);
+      line-height:1.55;
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    .back{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--accent);
+      font-weight:600;
+      text-decoration:none;
+      margin-bottom:16px;
+    }
+
+    h1{
+      color:var(--accent);
+      margin-bottom:6px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:0.95rem;
+      margin-bottom:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:16px;
+      border:1px solid rgba(255,255,255,0.03);
+      margin-bottom:22px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+
+    ul{
+      padding-left:18px;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    ul li{
+      margin-bottom:8px;
+    }
+
+    .link-btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:rgba(0,255,122,0.1);
+      border:1px solid rgba(0,255,122,0.25);
+      color:var(--accent);
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .warning{
+      border-left:4px solid #ffbf00;
+      background:rgba(255,191,0,0.08);
+      padding:14px;
+      border-radius:10px;
+      color:#ffd88a;
+      font-size:0.95rem;
+    }
+
+    @media (max-width:480px){
+      h1{font-size:1.4rem}
+      .gallery img{height:180px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- Back -->
+    <a href="/pages/iot/iot.html" class="back">
+      ← Back to IoT Gadgets
+    </a>
+
+    <!-- Title -->
+    <h1>2.4 GHz Wireless Resilience Testing Platform</h1>
+    <div class="subtitle">
+      ESP32 + NRF24L01 based lab for studying protocol disruption,
+      packet flooding, and wireless behavior in controlled environments.
+    </div>
+
+    <!-- Overview -->
+    <section class="card">
+      <h2 style="color:var(--accent)">Project Overview</h2>
+      <p style="color:var(--muted)">
+        This project demonstrates how low-cost microcontrollers like the ESP32,
+        combined with NRF24L01 RF modules, can be used to analyze and stress-test
+        2.4 GHz wireless protocols. The setup highlights how seemingly simple
+        hardware can influence wireless reliability, interference tolerance,
+        and protocol robustness.
+      </p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="card">
+      <h2 style="color:var(--accent)">Hardware Gallery</h2>
+      <div class="gallery">
+        <img src="/img/iot/BT_Jammer/pic1.jpg" alt="ESP32 setup showing RF lab configuration">
+        <img src="/img/iot/BT_Jammer/pic2.jpg" alt="ESP32 wireless testing build">
+        <img src="/img/iot/BT_Jammer/pic3.jpg" alt="ESP32 based 2.4 GHz test platform">
+        <img src="/img/iot/BT_Jammer/pic4.jpg" alt="NRF24L01 RF module used for experimentation">
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="card">
+      <h2 style="color:var(--accent)">Research Capabilities</h2>
+      <ul>
+        <li>2.4 GHz protocol disruption and interference analysis</li>
+        <li>Packet flooding and collision behavior studies</li>
+        <li>Bluetooth and Wi-Fi coexistence observations</li>
+        <li>Understanding deauthentication and channel congestion effects</li>
+        <li>Wireless resilience and mitigation testing</li>
+      </ul>
+    </section>
+
+    <!-- Resources -->
+    <section class="card">
+      <h2 style="color:var(--accent)">Resources & Firmware</h2>
+      <a
+        href="https://github.com/smoochiee/Bluetooth-jammer-esp32/tree/main"
+        target="_blank"
+        class="link-btn"
+      >
+        View Project Repository →
+      </a>
+      <br><br>
+      <a
+        href="https://smoochiee.github.io/Bluetooth-jammer-esp32/flash1"
+        target="_blank"
+        class="link-btn"
+      >
+        Flash Firmware (Web Tool) →
+      </a>
+    </section>
+
+    <!-- Legal -->
+    <section class="card">
+      <h2 style="color:var(--accent)">Legal & Ethical Notice</h2>
+      <div class="warning">
+        Wireless jamming and intentional interference with communication systems
+        is illegal in many countries and strictly regulated by law.
+        <br><br>
+        This project is intended <strong>only for educational, research,
+        and defensive testing</strong> in controlled environments such as
+        RF-shielded labs or with explicit authorization.
+        <br><br>
+        The author does not encourage or support unauthorized use, disruption
+        of public networks, or violation of local wireless regulations.
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
